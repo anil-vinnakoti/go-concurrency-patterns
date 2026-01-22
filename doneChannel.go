@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func worker(channel chan int, doneChannel <- chan bool){
+func someWorker(channel chan int, doneChannel <- chan bool){
 	for{
 		select{
 			case num, ok := <- channel:
@@ -19,16 +19,16 @@ func worker(channel chan int, doneChannel <- chan bool){
 	}
 }
 
-func main(){
+func doneChannel(){
 	doneChannel := make(chan bool)
 	channel := make(chan int)
 
-	go worker(channel, doneChannel)
+	go someWorker(channel, doneChannel)
 
 	for i:=0;i<4;i++{
 		channel <- i
 	}
 
-	time.Sleep(time.Second * 3)
+	time.Sleep(time.Second * 1)
 	close(doneChannel)
 }

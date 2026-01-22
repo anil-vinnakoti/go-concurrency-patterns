@@ -24,7 +24,7 @@ func worker(ctx context.Context, channel <-chan int){
 	}
 }
 
-func main(){
+func forSelect(){
 	jobsChannel := make(chan int)
 	ctx, contextCancel := context.WithCancel(context.Background())
 
