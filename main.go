@@ -4,4 +4,5 @@ func main() {
 	// primitives()
 	// doneChannel()
 	// forSelect()
+	pipeline()
 }
