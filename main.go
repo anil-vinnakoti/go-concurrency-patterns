@@ -4,5 +4,6 @@ func main() {
 	// primitives()
 	// doneChannel()
 	// forSelect()
-	pipeline()
+	// pipeline()
+	workerPool()
 }
