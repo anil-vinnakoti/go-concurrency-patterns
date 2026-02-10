@@ -5,5 +5,6 @@ func main() {
 	// doneChannel()
 	// forSelect()
 	// pipeline()
+	// workerPoolOneChannel()
 	workerPool()
 }
